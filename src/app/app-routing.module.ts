@@ -6,8 +6,11 @@ import {AlexComponent} from './alex/alex.component';
 function r() {
   return [
     {
-      path: '/vlad',
-      component: VladComponent
+      path: '/vlad/:id/posts/comments/:id2',
+      component: VladComponent,
+      data: {
+        lol: 'kek'
+      }
     },
     {
       path: '/alex',
@@ -22,6 +25,8 @@ function r() {
     }
   ];
 }
+
+const routes: Routes = r()
 
 @NgModule({
   imports: [
